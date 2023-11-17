@@ -2,6 +2,8 @@ package Conta;
 
 import java.util.Scanner;
 
+import Conta.util.Cores;
+
 public class Menu {
 
 	public static void main(String[] args) {
@@ -10,6 +12,7 @@ public class Menu {
 		
 		while (true) {
 			
+			System.out.println(Cores.TEXT_YELLOW + Cores.ANSI_BLACK_BACKGROUND);
 			System.out.println("**********************************************************");
 			System.out.println("                                                          ");
 			System.out.println("                BANCO DO BRAZIL COM Z                     ");
@@ -28,49 +31,49 @@ public class Menu {
 			System.out.println("                                                          ");
 			System.out.println("**********************************************************");
 			System.out.println("Entre com a opção desejada                                ");
-			System.out.println("                                                          ");
+			System.out.println("                                                          "+ Cores.TEXT_RESET);
 			op = leia.nextInt();
 			
 			if (op == 9) {
-				System.out.println("\nBanco do Brazil com Z - O seu futuro começa aqui!");
+				System.out.println(Cores.TEXT_WHITE_BOLD+ "\nBanco do Brazil com Z - O seu futuro começa aqui!");
 				sobre();
 				leia.close();
 				System.exit(0);
 				
 		switch (op) {
 		case 1:
-			System.out.println("Criar conta\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Criar conta\n\n");
 			break;
 			
 		case 2:
-			System.out.println("Listar todas as contas\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Listar todas as contas\n\n");
 			break;
 			
 		case 3:
-			System.out.println("Buscar conta por número\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Buscar conta por número\n\n");
 			break;
 			
 		case 4:
-			System.out.println("Atualizar dados da conta\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Atualizar dados da conta\n\n");
 			break;
 			
 		case 5:
-			System.out.println("Apagar conta\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Apagar conta\n\n");
 			break;
 			
 		case 6:
-			System.out.println("Sacar\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Sacar\n\n");
 			break;
 			
 		case 7:
-			System.out.println("Depositar\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Depositar\n\n");
 			break;
 			
 		case 8:
-			System.out.println("Transferir valores entre Contas\n\n");
+			System.out.println(Cores.TEXT_WHITE_BOLD+ "Transferir valores entre Contas\n\n");
 			break;
 			default:
-				System.out.println("\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_RED_BOLD+ "\nOpção Inválida!\n" +Cores.TEXT_RESET);
 				break;
 		}
 			}
